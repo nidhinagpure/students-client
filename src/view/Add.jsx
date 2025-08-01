@@ -14,7 +14,7 @@ function Add() {
 
     const addStudents = async () => {
         try {
-        const response = await axios.post("http://localhost:502/students", {
+        const response = await axios.post("https://students-server-ut73.onrender.com/students", {
             id:students.id,
             name:students.name,
             city:students.city,

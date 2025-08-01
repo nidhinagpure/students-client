@@ -22,7 +22,7 @@ function Home() {
 
     ]);
     const loadStudents = async () => {
-        const response = await axios.get("http://localhost:502/students");
+        const response = await axios.get("https://students-server-ut73.onrender.com/students");
         setStudents(response.data.data);
     };
 

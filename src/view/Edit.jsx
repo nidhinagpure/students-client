@@ -17,7 +17,7 @@ function Edit() {
 
     const editStudents = async () => {
         try {
-            const response = await axios.put(`http://localhost:502/students/${userid}`, {
+            const response = await axios.put(`https://students-server-ut73.onrender.com/students/${userid}`, {
                 id: students.id,
                 name: students.name,
                 city: students.city,
