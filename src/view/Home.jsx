@@ -22,7 +22,7 @@ function Home() {
 
     ]);
     const loadStudents = async () => {
-        const response = await axios.get("https://students-server-ut73.onrender.com/students");
+        const response = await axios.get(`${import.meta.env.VITE_APT_URL}/students`);
         setStudents(response.data.data);
     };
 
