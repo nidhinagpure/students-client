@@ -14,7 +14,7 @@ function Add() {
 
     const addStudents = async () => {
         try {
-        const response = await axios.post(`${import.meta.env.VITE_APT_URL}/students`, {
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/students`, {
             id:students.id,
             name:students.name,
             city:students.city,

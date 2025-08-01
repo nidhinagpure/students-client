@@ -8,7 +8,7 @@ import toast, {Toaster}from 'react-hot-toast';
 function Studentcard({ name, city, id,loadStudents }) {
     
     const deleteStudents = async()=>{
-        const response = await axios.delete(`${import.meta.env.VITE_APT_URL}/students/${id}`);
+        const response = await axios.delete(`${import.meta.env.VITE_API_URL}/students/${id}`);
         if(response.data.success){
             toast.success(response.data.message);
              loadStudents();

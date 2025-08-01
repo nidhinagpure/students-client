@@ -17,7 +17,7 @@ function Edit() {
 
     const editStudents = async () => {
         try {
-            const response = await axios.put(`${import.meta.env.VITE_APT_URL}/students/${userid}`, {
+            const response = await axios.put(`${import.meta.env.VITE_API_URL}/students/${userid}`, {
                 id: students.id,
                 name: students.name,
                 city: students.city,
