@@ -45,54 +45,83 @@ function Edit() {
             toast.error(e.response.data.message);
         }
     };
-    
-useEffect(() => {
-    if (userid) {
-    loadStudents();
-    }
-}, [userid]);
+
+    useEffect(() => {
+        if (userid) {
+            loadStudents();
+        }
+    }, [userid]);
 
 
-return (
-    <div >
-        <div className='flex flex-row justify-evenly pt-20'>
-            <div>
-                <img className='w-[500px] h-[500px] ' src={studentImage} />
-            </div>
-            <div className='bg-white shadow-md rounded-lg w-1/4 pt-14  mx-10'>
-                <h1 className='text-center font-bold text-2xl  pb-6'>Edit Students - {userid}</h1>
-
-                <input type='text'
-                    placeholder='Enter id'
-                    value={students.id}
-                    onChange={(e) => setStudents({ ...students, id: e.target.value })}
-                    className='block mx-auto w-80 p-2 outline-none border-2 border-gray-300 text-black m-2'
-                    disabled
-                />
-
-                <input type='text'
-                    placeholder='Enter name'
-                    value={students.name}
-                    onChange={(e) => setStudents({ ...students, name: e.target.value })}
-                    className='block mx-auto w-80 p-2 outline-none border-2 border-gray-300 mt-10'
-                />
-
-                <input type='text'
-                    placeholder='Enter city'
-                    value={students.city}
-                    onChange={(e) => setStudents({ ...students, city: e.target.value })}
-                    className='block mx-auto w-80 p-2 outline-none border-2 border-gray-300 mt-10' />
-
-                <Link to={`/`}>
-                    <button className='bg-blue-300 mt-10 py-2 px-10 block rounded-sm m-auto cursor-pointer'
-                    onClick={editStudents}
-                    >Edit Students</button>
-                </Link>
-            </div>
-        </div>
-        <Toaster />
+    return (
+        <div className="px-4 py-10">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-8">
+    {/* Image */}
+    <div className="flex-shrink-0 w-full lg:w-1/2 flex justify-center">
+      <img
+        src={studentImage}
+        alt="Student"
+        className="w-full max-w-[500px] aspect-square object-cover rounded-md"
+      />
     </div>
-)
+
+    {/* Form */}
+    <div className="bg-white shadow-md rounded-lg w-full lg:w-1/3 p-8 mt-16">
+      <h1 className="text-center font-bold text-2xl pb-6">
+        Edit Student - {userid}
+      </h1>
+
+      <div className="flex flex-col space-y-6">
+        <input
+          type="text"
+          placeholder="Enter id"
+          value={students.id}
+          onChange={(e) =>
+            setStudents({ ...students, id: e.target.value })
+          }
+          className="w-full p-2 outline-none border-2 border-gray-300 rounded"
+          disabled
+        />
+
+        <input
+          type="text"
+          placeholder="Enter name"
+          value={students.name}
+          onChange={(e) =>
+            setStudents({ ...students, name: e.target.value })
+          }
+          className="w-full p-2 outline-none border-2 border-gray-300 rounded"
+        />
+
+        <input
+          type="text"
+          placeholder="Enter city"
+          value={students.city}
+          onChange={(e) =>
+            setStudents({ ...students, city: e.target.value })
+          }
+          className="w-full p-2 outline-none border-2 border-gray-300 rounded"
+        />
+
+        <div className="text-center">
+          <Link to="/">
+            <button
+              className="bg-blue-300 mt-4 mb-2 py-2 px-6 rounded-sm cursor-pointer w-full sm:w-auto"
+              onClick={editStudents}
+            >
+              Edit Student
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Toast notifications */}
+  <Toaster />
+</div>
+
+    )
 };
 
 export default Edit

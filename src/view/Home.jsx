@@ -33,7 +33,7 @@ function Home() {
     return (
         <div>
             <div>
-                <h1 className='font-bold text-4xl text-center pt-8 mb-8'>All STUDENTS</h1>
+                <h1 className='font-bold text-4xl text-center pt-8 mb-8 underline '>All <span className='text-blue-600'>STUDENTS</span></h1>
                 {students.map((stud, i) => {
                     const { name, city, id, image } = stud;
                     return <Studentcard key={i} name={name} city={city} id={id} image={image} loadStudents={loadStudents}/>
