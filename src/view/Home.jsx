@@ -4,8 +4,6 @@ import { Link } from "react-router";
 import Studentcard from '../components/Studentcard';
 import adduser from "./../assets/add-user.png";
 
-
-
 function Home() {
     const [students, setStudents] = useState([
         {
@@ -19,6 +17,18 @@ function Home() {
             city: "Nagpure",
             id: 3
         },
+         {
+            name: "Nidhi",
+            city: "Pune",
+            id: 1,
+        },
+
+        {
+            name: "Arpit",
+            city: "Nagpure",
+            id: 5
+        },
+
     ]);
     const loadStudents = async () => {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/students`);
