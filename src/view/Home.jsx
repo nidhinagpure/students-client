@@ -19,7 +19,6 @@ function Home() {
             city: "Nagpure",
             id: 3
         },
-
     ]);
     const loadStudents = async () => {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/students`);

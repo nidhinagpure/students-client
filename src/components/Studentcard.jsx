@@ -5,7 +5,7 @@ import {Link} from "react-router"
 import toast, {Toaster}from 'react-hot-toast';
 
 
-function Studentcard({ name, city, id,loadStudents }) {
+function Studentcard({ name, city, id, loadStudents }) {
     
     const deleteStudents = async()=>{
         const response = await axios.delete(`${import.meta.env.VITE_API_URL}/students/${id}`);
