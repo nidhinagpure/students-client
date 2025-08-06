@@ -39,7 +39,7 @@ function Add() {
         <div className="px-4 py-20">
   <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10">
     {/* Image */}
-    <div className="w-full lg:w-1/2 flex justify-center">
+    <div className="w-full lg:w-1/2 flex justify-center sm:mt-2">
       <img
         src={studentImage}
         alt="Student"
@@ -48,7 +48,7 @@ function Add() {
     </div>
 
     {/* Form */}
-    <div className="bg-white shadow-md rounded-lg w-full lg:w-1/3 p-8 mt-16">
+    <div className="bg-white shadow-md rounded-lg w-full lg:w-1/3 p-8 mt-2 sm:mt-2">
       <h1 className="text-center font-bold text-2xl pb-6">Add Student</h1>
 
       <div className="flex flex-col space-y-5">
