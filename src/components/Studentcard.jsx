@@ -18,10 +18,10 @@ function Studentcard({ name, city, id,loadStudents }) {
     } 
     return (
         <div>
-        <div className='border-2 border-gray-400 p-4 m-4 mt-4 rounder-md shadow-md relative'>
+        <div className='border-2 border-blue-400 bg-blue-100 p-4 m-4 mt-4 rounder-md shadow-md relative'>
             <div>
-                <h1 className='text-xl font-bold'> {`id:${id}) ${name}`}</h1>
-                <p>{city}</p> 
+                <h1 className='text-xl font-bold'> {`id: ${id} - ${name}`}</h1>
+                <p className="text-xl">{city}</p> 
                 <img
                  className='w-8 h-8  top-1 right-5 cursor-pointer absolute' 
                  src={deleteimg} alt=''
